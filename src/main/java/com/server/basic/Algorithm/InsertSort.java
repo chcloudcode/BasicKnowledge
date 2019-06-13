@@ -1,4 +1,4 @@
-package com.server.basic.algorithm;
+package com.server.basic.Algorithm;
 
 /**
  * 插入排序

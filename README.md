@@ -1,7 +1,7 @@
 # 后端技术
 
 ## 软件基础
-*  algorithm
+*  Algorithm
     - 插入排序
     - 选择排序
     - 快速排序
@@ -13,7 +13,7 @@
     - 简单工厂模式
     - 抽象工厂模式
 * LeetCode&JZOffer
-* utils
+* Utils
     - RSA工具类
     - AES工具类
 

@@ -1,11 +1,21 @@
 # 后端技术
 
 ## 软件基础
-*  algorithm -- 基础算法
-* DataStructure -- 数据结构
-* DesignPattern -- 设计模式
-* LeetCode&JZOffer -- 刷题
-* utils -- 工具类
+*  algorithm
+    - 插入排序
+    - 选择排序
+    - 快速排序
+    - 归并排序
+* DataStructure 
+    - 顺序栈、链栈
+    - 顺序队列、链队、基于数组的循环队列
+* DesignPattern 
+    - 简单工厂模式
+    - 抽象工厂模式
+* LeetCode&JZOffer
+* utils
+    - RSA工具类
+    - AES工具类
 
 ## 框架API
 * Zookeeper

@@ -8,6 +8,6 @@
 * utils -- 工具类
 
 ## 框架API
-* Redis
 * Zookeeper
+    - 实战监控服务器动态上下线：client监听zk子节点，server端 创建/删除子节点 表示上下线
 

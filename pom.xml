@@ -17,6 +17,7 @@
 
     <properties>
         <zookeeper.version>3.4.10</zookeeper.version>
+        <kafka.version>2.2.1</kafka.version>
         <log4j.version>1.2.17</log4j.version>
         <slf4j.version>1.7.25</slf4j.version>
         <java.version>1.8</java.version>
@@ -57,6 +58,14 @@
             <artifactId>zookeeper</artifactId>
             <version>${zookeeper.version}</version>
         </dependency>
+
+        <!-- kafka-clients -->
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>${kafka.version}</version>
+        </dependency>
+
 
         <!--  log4j -->
         <dependency>

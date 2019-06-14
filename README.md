@@ -1,6 +1,6 @@
 # 后端技术
 
-## 软件基础
+## BASIC 软件基础
 *  Algorithm
     - 插入排序
     - 选择排序
@@ -17,7 +17,32 @@
     - RSA工具类
     - AES工具类
 
-## 框架API
+## CONCURRENCY 并发编程
+
+* AQS（同步组件）
+    - CountDownLatch
+    - Semaphore
+    - CyclicBarrier
+    - FutureTask
+    - Fork/Join
+* LOCK （锁）
+    - Synchronized
+    - ReentrantLock
+    - ReentrantReadWriteLock
+    - StampedLock
+* J.U.C及相关类
+    - Atomic （原子性）
+    - Async（synchronized）
+    - Immutable（不可变对象：final、Collections、Guava）
+    - UnSafeClass（线程不安全类）
+    - ThreadLocal （线程封闭）
+    - SyncContainer（同步容器）
+    - Concurrent（并发容器，线程安全）
+    
+* 线程池
+    - ThreadPoolExecutor
+
+## FRAMEWORK 框架
 * Zookeeper
     - 实战监控服务器动态上下线：client监听zk子节点，server端 创建/删除子节点 表示上下线
 

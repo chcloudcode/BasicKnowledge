@@ -1,4 +1,4 @@
-package com.server.framework.zookeeper;
+package com.server.framework.Zookeeper;
 
 
 import org.apache.zookeeper.*;

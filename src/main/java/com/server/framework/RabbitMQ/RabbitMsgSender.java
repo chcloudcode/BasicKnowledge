@@ -17,5 +17,4 @@ public class RabbitMsgSender {
         rabbitTemplate.convertAndSend("exchange01","msg.key",msg.getContent(),correlationData);
     }
 
-
 }

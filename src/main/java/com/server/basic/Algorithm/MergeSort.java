@@ -21,16 +21,13 @@ public class MergeSort extends BaseSort {
 	}
 
 	public static void sort(int[] a, int start, int end) {
-		if (start > end) {
+		if (start >= end) {
 			return;
 		}
-		if (start < end) {
-			int mid = (start + end) / 2;
-			sort(a, start, mid);
-			sort(a, mid + 1, end);
-			merge(a, start, mid, end);
-		}
-
+		int mid = (start + end) / 2;
+		sort(a, start, mid);
+		sort(a, mid + 1, end);
+		merge(a, start, mid, end);
 	}
 
 	public static void merge(int[] a, int start, int mid, int end) {

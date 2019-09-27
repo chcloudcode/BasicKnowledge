@@ -18,7 +18,7 @@ public class SelectSort extends BaseSort {
 	public static void sort(int a[]) {
 		for (int i = 0; i < a.length; i++) {
 			// a从第一个元素开始，同剩下元素比较，选出最小值，以此类推。
-			for (int j = i; j < a.length; j++) {
+			for (int j = i+1; j < a.length; j++) {
 				if (a[i] > a[j]) {
 					swap(a, i, j);
 				}

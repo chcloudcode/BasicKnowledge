@@ -133,6 +133,26 @@ public class  ListUtils{
     }
 
     /**
+     * 删除链表中重复的元素
+     * @param head
+     * @return
+     */
+    public static Node deleteSameNode(Node head){
+        if(head == null || head.next == null) return head;
+        Node p = head,q=p.next;
+        while(q!=null&&p.next!=null){
+            if(p.data!=q.data) {
+                q=q.next;
+                p=p.next;
+            }else{
+                p.next=q.next;
+                q=q.next;
+            }
+        }
+        return head;
+    }
+
+    /**
      * 打印链表
      * @param head
      */
@@ -145,26 +165,43 @@ public class  ListUtils{
     }
 
     public static void main(String[] args) {
-        Node l1 = new Node(1);
-        Node l2 = new Node(3);
-        Node l3 = new Node(5);
-        Node l4 = new Node(7);
-        Node l5 = new Node(9);
-        l1.next=l2;l2.next=l3;l3.next=l4;l4.next=l5;l5.next=null;
-        display(ListUtils.reverse(l1));//关系反转了
-        l1.next=l2;l2.next=l3;l3.next=l4;l4.next=l5;l5.next=null;
+//        Node l1 = new Node(1);
+//        Node l2 = new Node(3);
+//        Node l3 = new Node(5);
+//        Node l4 = new Node(7);
+//        Node l5 = new Node(9);
+//        l1.next=l2;l2.next=l3;l3.next=l4;l4.next=l5;l5.next=null;
+//        display(ListUtils.reverse(l1));//关系反转了
+//        l1.next=l2;l2.next=l3;l3.next=l4;l4.next=l5;l5.next=null;
+//
+//        Node r1 = new Node(2);
+//        Node r2 = new Node(4);
+//        Node r3 = new Node(6);
+//        Node r4 = new Node(8);
+//        Node r5 = new Node(10);
+//        r1.next=r2;r2.next=r3;r3.next=r4;r4.next=r5;r5.next=null;
+//        display(r1);
+//        display(ListUtils.mergeOrderList(l1,r1));
+//
+//        System.out.println(ListUtils.findListMiddata(l1).data);
+//        System.out.println(ListUtils.findListMiddata(r1).data);
 
-        Node r1 = new Node(2);
-        Node r2 = new Node(4);
-        Node r3 = new Node(6);
-        Node r4 = new Node(8);
-        Node r5 = new Node(10);
-        r1.next=r2;r2.next=r3;r3.next=r4;r4.next=r5;r5.next=null;
-        display(r1);
-        display(ListUtils.mergeOrderList(l1,r1));
+        Node n1 = new Node(1);
+        Node n2 = new Node(1);
+        Node n3 = new Node(2);
+        Node n4 = new Node(3);
+        Node n5 = new Node(3);
+        Node n6 = new Node(4);
+        Node n7 = new Node(4);
+        Node n8 = new Node(4);
+        Node n9 = new Node(5);
+        Node n10 = new Node(6);
+        Node n11= new Node(6);
+        n1.next=n2;n2.next=n3;n3.next=n4;n4.next=n5;n5.next=n6;n6.next=n7;n7.next=n8;n8.next=n9;n9.next=n10;n10.next=n11;
 
-        System.out.println(ListUtils.findListMiddata(l1).data);
-        System.out.println(ListUtils.findListMiddata(r1).data);
+        display(ListUtils.deleteSameNode(n1));
+
+
         
     }
 

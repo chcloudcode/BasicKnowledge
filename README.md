@@ -42,12 +42,6 @@
 * 线程池
     - ThreadPoolExecutor
 
-## FRAMEWORK 框架
-* Zookeeper
-    - 实战监控服务器动态上下线：client监听zk子节点，server端 创建/删除子节点 表示上下线
-* RabbitMQ
-    - SpringBoot集成RabbitMQ实现简单的消息发送和接收
-* Kafka
-    - Kafka集群的简单使用，消息的发送和接收
+
    
 

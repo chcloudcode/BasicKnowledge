@@ -1,15 +1,13 @@
 # 目录说明
 
-持续更新。。。
+持续更新
 
-*  Algorithm
+* Algorithm
     -   排序
     -   查找
-
 * Basic
     - Java注解
     - 剑指Offer
-
 * Concurrency 并发编程
     - J.U.C examples
         - Atomic （原子性）
@@ -31,24 +29,20 @@
         - ReentrantReadWriteLock
         - StampedLock
     - ThreadPool
-
 * DataStructure 
     - 栈、队列
     - 链表
-
 * DesignPattern 
     - 工厂模式
     - 策略模式
-
 * LeetCode
     - simple
     - middle
-
 * Utils
     - RSA工具类
 
 
 
 
-   
+
 

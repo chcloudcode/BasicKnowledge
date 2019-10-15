@@ -42,7 +42,7 @@ class FactoryCreator{
         if(null==type||type.equals("")){
             return null;
         }
-        if(type.equals("animal")){
+        if(type.equals("Animal")){
             return new AnimalFactory();
         }
         return null;
@@ -51,7 +51,7 @@ class FactoryCreator{
 
 public class abstractFactoryPattern{
     public static void main(String[] args) {
-        Factory factory = FactoryCreator.getFactory("animal");
+        Factory factory = FactoryCreator.getFactory("Animal");
         Animal Mouse = factory.get("Mouse");
         Mouse.run();
     }

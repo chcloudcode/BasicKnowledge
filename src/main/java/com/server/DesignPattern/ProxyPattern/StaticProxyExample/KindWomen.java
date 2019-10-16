@@ -1,4 +1,7 @@
 package com.server.DesignPattern.ProxyPattern.StaticProxyExample;
 
-public interface CommonInterface {
+public interface KindWomen {
+
+    void happyWithMan();
+
 }

@@ -1,4 +1,6 @@
 package com.server.DesignPattern.ProxyPattern.DynamicProxyExample;
 
-public interface CommonInterface {
+public interface Human {
+    void color();
+    void birth();
 }

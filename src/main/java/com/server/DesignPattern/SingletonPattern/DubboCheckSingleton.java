@@ -23,7 +23,7 @@ public class DubboCheckSingleton {
 
     private DubboCheckSingleton(){}
 
-    private static DubboCheckSingleton getInstance(){
+    public static DubboCheckSingleton getInstance(){
         if(null == instance){
             synchronized (DubboCheckSingleton.class){
                 if(null == instance){

@@ -2,7 +2,7 @@ package com.server.Algorithm.Sort;
 
 
 /**
- * 冒泡排序
+ * 冒泡排序 时间复杂度：O(n^2)，适合小规模数据的排序
  */
 public class BubbleSort extends BaseSort {
 

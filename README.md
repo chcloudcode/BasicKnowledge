@@ -33,8 +33,11 @@
     - 栈、队列
     - 链表
 * DesignPattern 
-    - 工厂模式
-    - 策略模式
+    - FactoryPattern 工厂模式
+    - ObserverPattern 观察者模式
+    - ProxyPattern 代理模式
+    - SingletonPattern 单例模式
+    - StrategyPattern 策略模式
 * LeetCode
     - simple
     - middle

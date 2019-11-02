@@ -1,7 +1,7 @@
 package com.server.Algorithm.Sort;
 
 /**
- * 插入排序
+ * 插入排序 时间复杂度：O(n^2) 适合小规模数据的排序
  * 
  * @author chenh
  *

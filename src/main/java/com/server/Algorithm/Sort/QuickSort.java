@@ -7,59 +7,35 @@ package com.server.Algorithm.Sort;
 
 public class QuickSort extends BaseSort{
 
-	public static void sort(int[] a, int start, int end) {
-		if (start >= end)  return ;
-		int mid = OnceQuickSort(a, start, end);
-		sort(a, start, mid - 1);
-		sort(a, mid + 1, end);
+	public static void sort(int[] arr,int p,int r){
+		if(p>=r) return;
+		int q = partition(arr,p,r);
+		sort(arr,p,q-1);
+		sort(arr,q+1,r);
 	}
 
-	public static int OnceQuickSort(int[] a, int start, int end) {
-		int i = start;
-		int j = end;
-		//temp 临时 标识 中间点，最终i = j = tmp
-		int temp = i;
-
-		// 寻找中间点的位置，即左侧比中间点小，右侧比中间点大
-		while (i < j) {
-			if (temp == i) {
-				if (a[i] > a[j]) {
-					swap(a, i, j);
-					temp = j;
-					i++;
-				} else {
-					j--;
-				}
-			} else {
-				if (a[i] > a[j]) {
-					swap(a, i, j);
-					temp = i;
-					j--;
-				} else {
-					i++;
-				}
-			}
-			//解决 temp 一轮下来没有 移动 一直是i
-			if (temp == i && i == start) {
+	private static int partition(int[] arr, int p, int r) {
+		int pivot = arr[r];
+		int i = p;
+		for (int j = p; j < r; j++) {
+			if (arr[j] <= pivot) {
+				swap(arr, i, j);
 				i++;
-				j = end;
-			}
-			//解决 temp 一轮下来没有移动 一直是j
-			if (temp == j && j == end) {
-				j--;
-				i = start;
 			}
 		}
-		return temp;
+
+		swap(arr, i, r);
+		System.out.print("找到中间点：i = "+i+"  ");
+		System.out.print("此时结果为：");
+		show(arr);
+		return i;
 	}
 
 	public static void main(String[] args) {
 
 		int[] a = new int[] { 7, 6, 8, 5, 1, 3, 2, 9, 4, 0 };
-		System.out.println("before sort:");
 	    show(a);
 		sort(a, 0, a.length - 1);
-		System.out.println("after sort:");
 		show(a);
 
 	}

@@ -1,11 +1,13 @@
-package com.server.DataStructure;
+package com.server.DataStructure.StackAndQueue;
+
+import com.server.DataStructure.Node;
 
 /**
  * 链表实现队列
  */
 public class ListQueue {
 
-    public  Node head = null;
+    public Node head = null;
 
     public Node tail = head;
 

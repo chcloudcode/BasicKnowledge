@@ -1,4 +1,6 @@
-package com.server.DataStructure;
+package com.server.DataStructure.LinkedList;
+
+import com.server.DataStructure.Node;
 
 /**
  * 用链表实现LRU 缓存淘汰算法

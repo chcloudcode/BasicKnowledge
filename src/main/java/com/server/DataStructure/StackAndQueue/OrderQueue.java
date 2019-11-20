@@ -1,4 +1,4 @@
-package com.server.DataStructure;
+package com.server.DataStructure.StackAndQueue;
 
 /**
  * 数组实现队列

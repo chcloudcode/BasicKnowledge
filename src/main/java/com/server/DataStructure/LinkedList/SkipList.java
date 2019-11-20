@@ -1,5 +1,8 @@
-package com.server.DataStructure;
+package com.server.DataStructure.LinkedList;
 
+/**
+ * 跳表：链表 + 多级索引
+ */
 public class SkipList {
 
     private static final float SKIPLIST_P = 0.5f;

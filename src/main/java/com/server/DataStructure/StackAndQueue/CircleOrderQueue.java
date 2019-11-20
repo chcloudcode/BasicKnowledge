@@ -1,4 +1,4 @@
-package com.server.DataStructure;
+package com.server.DataStructure.StackAndQueue;
 
 /**
  * 基于数组的循环队列

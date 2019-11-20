@@ -1,4 +1,4 @@
-package com.server.DataStructure;
+package com.server.DataStructure.StackAndQueue;
 
 
 public class OrderStack {

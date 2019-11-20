@@ -1,4 +1,6 @@
-package com.server.DataStructure;
+package com.server.DataStructure.StackAndQueue;
+
+import com.server.DataStructure.Node;
 
 public class ListStack{
     public Node top = null;

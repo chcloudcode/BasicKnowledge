@@ -1,4 +1,6 @@
-package com.server.DataStructure;
+package com.server.DataStructure.LinkedList;
+
+import com.server.DataStructure.Node;
 
 /**
  *

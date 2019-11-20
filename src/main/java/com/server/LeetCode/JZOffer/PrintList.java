@@ -1,4 +1,4 @@
-package com.server.Basic.JZOffer;
+package com.server.LeetCode.JZOffer;
 
 import java.util.ArrayList;
 import java.util.Collections;

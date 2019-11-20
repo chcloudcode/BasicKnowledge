@@ -1,4 +1,4 @@
-package com.server.Basic.JZOffer;
+package com.server.LeetCode.JZOffer;
 
 /**
  * 给定一个非负num , 反复将 各个位置上的数字相加，直到得到的结果位数为1

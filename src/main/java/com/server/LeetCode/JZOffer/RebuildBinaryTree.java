@@ -1,4 +1,4 @@
-package com.server.Basic.JZOffer;
+package com.server.LeetCode.JZOffer;
 
 class TreeNode {
 	int val;

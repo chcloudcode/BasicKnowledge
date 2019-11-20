@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class BIOServerHandler implements Runnable {
 
@@ -21,6 +22,7 @@ public class BIOServerHandler implements Runnable {
         try{
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream());
+            Scanner sin = new Scanner(System.in);
             while(true){
                 System.out.println("thread id : "+ Thread.currentThread().getId()+"  read ........");
                 String result = in.readLine();
@@ -29,7 +31,8 @@ public class BIOServerHandler implements Runnable {
                     break;
                 }
                 System.out.println("thead id:  "+Thread.currentThread().getId()+ "  客户端数据："+ result);
-                out.println("来自服务器的 消息："+System.currentTimeMillis());
+                String response = sin.nextLine();
+                out.println("来自服务器的 消息："+response);
                 out.flush();
             }
         }catch (Exception e){

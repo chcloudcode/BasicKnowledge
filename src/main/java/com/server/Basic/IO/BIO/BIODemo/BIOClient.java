@@ -23,7 +23,7 @@ public class BIOClient {
             while (!line.equals("exit")){
                 //注意这里使用的是  out.println()  而不是 out.write()
                 out.println(line);
-//                out.write(line);
+//                out.write(line+"\r\n");
                 out.flush();
                 System.out.println(in.readLine());
                 line = sin.nextLine();

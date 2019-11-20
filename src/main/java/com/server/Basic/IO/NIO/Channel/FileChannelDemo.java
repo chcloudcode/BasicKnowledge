@@ -1,4 +1,4 @@
-package com.server.Basic.IO.NIO.channel;
+package com.server.Basic.IO.NIO.Channel;
 
 import java.io.File;
 import java.io.FileNotFoundException;

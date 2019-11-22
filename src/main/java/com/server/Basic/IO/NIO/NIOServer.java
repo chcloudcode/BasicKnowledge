@@ -41,8 +41,8 @@ public class NIOServer {
             while (iterator.hasNext()){
                 SelectionKey key = iterator.next();
                 if(key.isAcceptable()){
-                    System.out.println("监听到一个客户端连接事件");
                     SocketChannel socketChannel = serverSocketChannel.accept();
+                    System.out.println("监听到一个客户端连接事件，客户端Channel的hashCode"+socketChannel.hashCode());
                     socketChannel.configureBlocking(false);
                     socketChannel.register(selector,SelectionKey.OP_READ, ByteBuffer.allocate(1024));
                 }

@@ -7,8 +7,18 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import java.nio.charset.Charset;
 import java.util.Date;
 
-public class FirstServerHandler extends ChannelInboundHandlerAdapter {
 
+/**
+ * 自定义Handler 需继承netty 规定的 HandlerAdapter
+ */
+
+public class NettyServerHandler extends ChannelInboundHandlerAdapter {
+
+    /**
+     *   实际读取数据
+     * @param ctx  上下文对象 ：包含：管道pipeline 通道  地址
+     * @param msg  实际客户端发送过来的数据
+     */
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         ByteBuf byteBuf = (ByteBuf) msg;
@@ -29,5 +39,11 @@ public class FirstServerHandler extends ChannelInboundHandlerAdapter {
         buffer.writeBytes(bytes);
 
         return buffer;
+    }
+
+    //处理异常，关闭通道
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        ctx.channel().close();
     }
 }

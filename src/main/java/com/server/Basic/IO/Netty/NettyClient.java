@@ -20,6 +20,7 @@ public class NettyClient {
     public static void main(String[] args) {
         NioEventLoopGroup workerGroup = new NioEventLoopGroup();
 
+        //创建客户端启动对象 Bootstrap ，注意区分 服务器端，并配置参数，链式调用
         Bootstrap bootstrap = new Bootstrap();
         bootstrap
                 .group(workerGroup)
@@ -30,7 +31,7 @@ public class NettyClient {
                 .handler(new ChannelInitializer<SocketChannel>() {
                     @Override
                     public void initChannel(SocketChannel ch) {
-                        ch.pipeline().addLast(new FirstClientHandler());
+                        ch.pipeline().addLast(new NettyClientHandler());
                     }
                 });
 

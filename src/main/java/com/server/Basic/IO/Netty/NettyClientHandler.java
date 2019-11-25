@@ -7,8 +7,12 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import java.nio.charset.Charset;
 import java.util.Date;
 
-public class FirstClientHandler extends ChannelInboundHandlerAdapter {
+public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 
+    /**
+     *  当通道就绪就会触发该方法
+     * @param ctx
+     */
     @Override
     public void channelActive(ChannelHandlerContext ctx) {
         System.out.println(new Date() + ": 客户端写出数据");
@@ -31,6 +35,11 @@ public class FirstClientHandler extends ChannelInboundHandlerAdapter {
     }
 
 
+    /**
+     * 当通道有读取事件时，触发
+     * @param ctx  上下文对象
+     * @param msg 服务器返回的信息
+     */
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         ByteBuf byteBuf = (ByteBuf) msg;

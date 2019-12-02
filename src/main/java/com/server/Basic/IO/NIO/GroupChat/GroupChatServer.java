@@ -1,14 +1,13 @@
 package com.server.Basic.IO.NIO.GroupChat;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.*;
 import java.util.Iterator;
 
 /**
- * 群聊——服务端
+ * NIO群聊系统——服务端
  * 1. 监听 客户端上下线
  * 2. 同客户端通信 并实现 消息转发
  */

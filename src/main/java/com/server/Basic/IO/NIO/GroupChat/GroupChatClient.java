@@ -1,10 +1,8 @@
 package com.server.Basic.IO.NIO.GroupChat;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
-import java.nio.channels.SelectableChannel;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
@@ -12,7 +10,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 /**
- * 群聊系统——客户端
+ * NIO群聊系统——客户端
  * 1. 同服务器通信
  * 2. 接受服务器消息的转发
  */

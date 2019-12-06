@@ -1,4 +1,4 @@
-package com.server.Utils.Common;
+package com.server.Utils;
 
 import lombok.NonNull;
 
@@ -12,15 +12,27 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
+/**
+ * 时间工具类：Timestamp String long
+ */
 public class DateTimes {
     public final static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
     public final static ZoneOffset zoneOffset = ZoneOffset.of("+8");
     public final static String DEFAULT_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
+    /**
+     * 获取当前 时间
+     * @return
+     */
     public static String now() {
         return LocalDateTime.now().format(formatter);
     }
 
+    /**
+     * Timestamp -> String
+     * @param time
+     * @return
+     */
     public static String timestamp(Timestamp time) {
         if (time == null) {
             return null;
@@ -28,6 +40,12 @@ public class DateTimes {
         return time.toLocalDateTime().format(formatter);
     }
 
+    /**
+     * Timestamp，format -> String
+     * @param time
+     * @param format
+     * @return
+     */
     public static String timestamp(Timestamp time, String format) {
         if (time == null) {
             return null;
@@ -35,7 +53,11 @@ public class DateTimes {
         return time.toLocalDateTime().format(DateTimeFormatter.ofPattern(format));
     }
 
-
+    /**
+     * long -> Timestamp
+     * @param time
+     * @return
+     */
     public static String timestamp(long time) {
         if (time <= 0) {
             return null;
@@ -43,6 +65,12 @@ public class DateTimes {
         return timestamp(new Timestamp(time));
     }
 
+    /**
+     * long，format -> String
+     * @param time
+     * @param format
+     * @return
+     */
     public static String timestamp(long time, String format) {
         if (time <= 0) {
             return null;

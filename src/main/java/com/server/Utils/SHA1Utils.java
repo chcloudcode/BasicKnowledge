@@ -12,6 +12,7 @@ public class SHA1Utils {
 
     static {
         try {
+
             md = MessageDigest.getInstance("SHA-1");
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();

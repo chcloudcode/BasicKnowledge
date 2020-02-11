@@ -24,15 +24,17 @@ public class BIOServerHandler implements Runnable {
             out = new PrintWriter(socket.getOutputStream());
             Scanner sin = new Scanner(System.in);
             while(true){
-                System.out.println("thread id : "+ Thread.currentThread().getId()+"  read ........");
+                System.out.println("Thread ID : "+ Thread.currentThread().getId()+"  准备读。。。。");
+                //准备读取客户端发送的消息
                 String result = in.readLine();
                 if(result.equals("")|| result.equals("exit")) {
-                    System.out.println("thread id : "+ Thread.currentThread().getId()+" 结束 ");
+                    System.out.println("Thread ID : "+ Thread.currentThread().getId()+" ，服务器端收到该客户端结束通信指令！ ");
                     break;
                 }
                 System.out.println("thead id:  "+Thread.currentThread().getId()+ "  客户端数据："+ result);
                 String response = sin.nextLine();
-                out.println("来自服务器的 消息："+response);
+                //响应给客户端的消息
+                out.println("服务器响应消息："+response);
                 out.flush();
             }
         }catch (Exception e){

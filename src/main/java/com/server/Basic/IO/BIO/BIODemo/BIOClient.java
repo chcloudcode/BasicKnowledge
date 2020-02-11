@@ -22,9 +22,11 @@ public class BIOClient {
             String line = sin.nextLine();
             while (!line.equals("exit")){
                 //注意这里使用的是  out.println()  而不是 out.write()
+                //往服务器端发送消息
                 out.println(line);
 //                out.write(line+"\r\n");
                 out.flush();
+                //获取服务器端响应的消息
                 System.out.println(in.readLine());
                 line = sin.nextLine();
             }

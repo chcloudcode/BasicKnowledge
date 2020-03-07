@@ -1,7 +1,5 @@
 package com.server.Utils;
 
-import lombok.val;
-
 import javax.crypto.*;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.UnsupportedEncodingException;
